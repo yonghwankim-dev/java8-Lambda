@@ -1,0 +1,33 @@
+package java8.chapter02_컬렉션의사용.ch02_01;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Iteration {
+	public static void main(String args[])
+	{
+		// 불변(Immutable) 컬렉션
+		final List<String> friends = Arrays.asList("Brian","Nate","Neal","Raju","Sara","Scott");
+		
+		
+		/**
+		 * step1 각각의 엘리먼트를 이터레이션
+		 * 자해하는 패턴이라고 부름
+		 * 코드가 장황하고 오류가 발생활 확률이 높음
+		 * 컬렉션에서 특정 인덱스에 있는 엘리먼트를
+		 * 처리하는 경우에만 유요함
+		 */
+		for(int i=0;i<friends.size();i++)
+		{
+			System.out.println(friends.get(i));
+		}
+		
+		/**
+		 * step2 내부적인 이터레이션 사용
+		 */
+		for(String name : friends)
+		{
+			System.out.println(name);
+		}
+	}
+}

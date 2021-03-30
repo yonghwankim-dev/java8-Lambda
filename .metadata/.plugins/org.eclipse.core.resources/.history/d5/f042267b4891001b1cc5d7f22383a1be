@@ -1,0 +1,10 @@
+package java8.chapter02_컬렉션의사용.ch02_02;
+
+public class Transform {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

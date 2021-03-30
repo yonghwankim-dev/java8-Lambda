@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\qkdlf\Project\language\java\자바8람다식\.metadata\.plugins\org.eclipse.jdt.core
+3460880079.index
+2651742271.index

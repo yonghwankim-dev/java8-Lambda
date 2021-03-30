@@ -1,0 +1,40 @@
+package java8.chapter02_컬렉션의사용.ch02_02;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Transform {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final List<String> friends = Arrays.asList("Brian","Nate","Neal","Raju","Sara","Scott");
+		
+		/**
+		 * step1 새로운 컬렉션 생성하여 대문자로 변환후 저장
+		 */
+		final List<String> uppercaseNames = new ArrayList<String>();
+		for(String name : friends)
+		{
+			uppercaseNames.add(name.toUpperCase());
+		}
+		
+		/**
+		 * step2 내부 iterator 사용
+		 * - 내부 iterator를 사용했지만 여전히 빈 리스트(uppercaseNames)가 필요하고 그 리스트에 엘리먼트를
+		 * 추가하는 작업도 필요하다.
+		 */
+		uppercaseNames.clear();
+		friends.forEach(name -> uppercaseNames.add(name.toUpperCase()));
+		
+		/**
+		 * step3 map 메서드 사용
+		 * - map() 메서드를 사용하면 가변성(mutability)이 발생하지 않도록 할 수 있으며
+		 * 코드를 더 간결하게 만들 수 있다.
+		 * - map() 메서드는 입력 순서를 출력 순서로 매핑하거나 입력 순서를 다른 순서의 출력으로
+		 * 변형한다.
+		 */
+		
+	}
+
+}
