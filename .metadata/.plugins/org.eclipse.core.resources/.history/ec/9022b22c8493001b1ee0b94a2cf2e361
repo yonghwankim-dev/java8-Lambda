@@ -1,0 +1,35 @@
+package java8.chapter02_컬렉션의사용.ch02_08_엘리먼트조인;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class PrintList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
+		/**
+		 * step1 기존 for문을 활용한 컬렉션 리스트 출력
+		 * 아래 for문의 문제는 마지막 이름 뒤에 ','가 출력된다.
+		 */
+		for(String name : friends)
+		{
+			System.out.print(name + ", ");
+		}
+		System.out.println();
+		
+		/**
+		 * step2
+		 */
+		for(int i=0;i<friends.size();i++)
+		{
+			System.out.print(friends.get(i) + ", ");
+		}
+		if(friends.size()>0)
+		{
+			System.out.println(friends.get(friends.size()-1));
+		}
+		
+	}
+
+}

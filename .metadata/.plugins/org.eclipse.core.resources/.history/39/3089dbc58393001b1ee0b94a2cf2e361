@@ -1,0 +1,10 @@
+package java8.chapter02_컬렉션의사용.ch02_08_엘리먼트조인;
+
+public class PrintList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
