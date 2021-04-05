@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/java8/src/chapter03_문자열과비교및필터/ch03_02_Comparator인터페이스구현/Compare.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="chapter03_문자열과비교및필터.ch03_02_Comparator인터페이스구현.Compare"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="java8"/>
+</launchConfiguration>

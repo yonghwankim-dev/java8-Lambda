@@ -1,0 +1,15 @@
+package chapter03_문자열과비교및필터.ch03_02_Comparator인터페이스구현;
+
+import java.util.Arrays;
+
+public class Compare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final List<Person> people = Arrays.asList(new Person("John",20),
+													new Person("Sara",21),
+													new Person("Jane",21),
+													new Person("Greg",35));
+	}
+
+}
