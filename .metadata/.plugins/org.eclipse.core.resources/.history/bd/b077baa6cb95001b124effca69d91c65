@@ -1,8 +1,0 @@
-package chapter03_문자열과비교및필터.ch03_01_스트링이터레이션;
-
-public class IteraterString {
-	public static void main(String args[])
-	{
-		
-	}
-}

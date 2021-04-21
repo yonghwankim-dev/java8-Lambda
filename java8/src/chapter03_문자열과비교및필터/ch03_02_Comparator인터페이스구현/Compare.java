@@ -22,6 +22,11 @@ public class Compare {
 		 * 기존 List 인터페이스의 sort() 메소드는 리턴타입이 void이므로 원본 컬렉션이
 		 * 변경된다. 이는 원본 리스트를 보존하기 위해서는 복사본을 만들수 밖에 없다.
 		 * 위의 문제를 해결하기 위해서 스트림을 사용하면 이러한 문제점을 피할 수 있다.
+		 * 
+		 * 1. people에 대한 리스트를 stream() 메서드를 사용해서 스트림으로 변환
+		 * 2. sorted() 메서드 호출, sorted 메서드는 파라미터로 Comparator 함수형 인터페이스를 갖기
+		 * 때문에 람다 표현식을 인수로 쉽게 넘길 수 있다.
+		 * 3. collect() 메서드를 호출하고 결과를 하나의 리스트로 만든다.
 		 */
 		List<Person> ascendingAge = people.stream()
 											.sorted((person1, person2)->person1.ageDifference(person2))

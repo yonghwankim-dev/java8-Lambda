@@ -1,0 +1,25 @@
+package chapter03_문자열과비교및필터.ch03_05_디렉터리에서모든파일리스트화;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class ListFiles {
+	
+	/**
+	 * step1 현재 디렉터리에 존재하는 모든 파일의 이름에 대한 리스트를 출력하는 코드
+	 * @throws IOException
+	 */
+	public static void example1() throws IOException
+	{
+		Files.list(Paths.get("."))
+				.forEach(System.out::println);
+				
+	}
+	
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		example1();
+	}
+
+}

@@ -18,7 +18,13 @@ public class Compare {
 		
 		/**
 		 * step1 이름을 비교해서 사람들을 정렬
-		 * 아래 기능을 활용하면 다중 비교를 더욱 다양하게 할 수 있다.
+		 * 1. 아래 기능을 활용하면 다중 비교를 더욱 다양하게 할 수 있다.
+		 * 2. comparing() 메서드는 Comparator를 생성하기 위해 제공된 람다 표현식의
+		 * 로직을 사용한다.
+		 * 3. 고차함수
+		 * 	- 하나의 함수(Function)을 갖고 다른 것(Comparator)를 리턴한다는 의미 
+		 *
+		 * 
 		 */
 		final Function<Person, String> byName = person -> person.getName();
 		people.stream()

@@ -23,6 +23,8 @@ public class Compare {
 		
 		/**
 		 * step1 가변성과 forEach() 메서드를 사용하여 collect 기능 사용
+		 * collect() 메서드는 컬렉슨을 다른 형태, 즉 가변 컬렉션(mutable collection)
+		 * 으로 변경하는데 유용한 리듀스(Reduce) 오퍼레이션이다.
 		 * 
 		 * 문제점
 		 * 1. 타깃 컬렉션에 엘리먼트를 추가하는 오퍼레이션이 너무 로우 레벨이다.
@@ -74,7 +76,11 @@ public class Compare {
 		
 		/**
 		 * step4 사람들의 나이를 값으로 사용해서 그룹으로 묶는 groupingBy() 사용
-		 * groupingBy() 메서드는 다중 영역을 조합하여 묶을 수 있다.
+		 * 1. groupingBy() 메서드는 다중 영역을 조합하여 묶을 수 있다.
+		 * 2. groupingBy() 메서드는 람다 표현식이나 메서드 레퍼런스를 인수로 갖는다.
+		 * 3. groupingBy() 메서드의 람다 표현식이나 메서드 레퍼런스 인수를 분류 함수(classifier function)
+		 * 이라고 한다.
+		 * 4. 이 분류함수는 우리가 그룹핑하려고 하는 엘리먼트의 속성값을 리턴한다.
 		 */
 		Map<Integer,List<Person>> peopleByAge =
 												people.stream()
@@ -82,10 +88,11 @@ public class Compare {
 		System.out.println("Grouped by age : " + peopleByAge);
 		
 		/**
-		 * step5 나이로 Person의 객체에 대한 맴븡ㄹ 생성하지 않고 사람들의 이름과 나이 순서대로 정렬
-		 * groupingBy 첫번째 파라미터로 그룹핑을 시전
-		 * 두번째 파라미터는 mapping() 함수 호출의 결과인 Collector
-		 * 
+		 * step5 나이로 Person의 객체에 대한 맵을 생성하지 않고 사람들의 이름과 나이 순서대로 정렬
+		 * 1. groupingBy 첫번째 파라미터로 그룹핑을 시전
+		 * 2. 두번째 파라미터는 mapping() 함수 호출의 결과인 Collector
+		 * 3. mapping() 메서드는 두 개의 정보를 가지며 그 정보 중 하나는 어떤 map(이 경우에는 이름)
+		 * 을 사용할지에 대한 속성이고 다른 하나는 모으는 객체의 타입이다.
 		 * 결과는 이름 리스트가 나이로 그룹 지어졌다.
 		 */
 		Map<Integer, List<String>> nameOfPeopleByAge = people.stream()
@@ -97,6 +104,12 @@ public class Compare {
 		
 		/**
 		 * step6 첫번째 문자로 이름을  그룹핑하고 나서 각 그룹에서 가장 나이가 많은 사람을 얻기
+		 * 1. 첫번째 문자를 기반으로 이름을 그룹핑한다. 이 작업을 위해 groupingBy() 메서드에
+		 *  첫번째 파라미터로 람다 표현식을 전달한다.
+		 *  이 람다 표현식에서 그룹핑을 위해 이름의 첫번째 문자를 리턴한다.
+		 * 2. 두번째 파라미터는 매핑 대신에 리듀스 오퍼레이션을 수행한다. 각 그룹에서 가장 나이가
+		 * 많은 사람으로 엘리먼트들을 리듀스 한다.
+		 * 3. 가장 나이 많은 사람을 선택하는 기능은 maxBy() 메서드를 사용한다.
 		 */
 		Comparator<Person> byAge = Comparator.comparing(Person::getAge);
 		Map<Character, Optional<Person>> oldestPersonOfEachLetter =

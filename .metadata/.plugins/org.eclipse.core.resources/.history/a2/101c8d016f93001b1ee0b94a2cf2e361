@@ -1,8 +1,0 @@
-package java8.chapter02_컬렉션의사용.ch02_06_엘리먼트선택;
-
-public class PickAnElement {
-	public static void main(String args[])
-	{
-		
-	}
-}
