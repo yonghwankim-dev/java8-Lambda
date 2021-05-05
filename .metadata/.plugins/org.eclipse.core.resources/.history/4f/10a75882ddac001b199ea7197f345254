@@ -1,0 +1,5 @@
+package chapter04_람다표현식을이용한설계.ch04_01_람다를사용한문제의분리;
+
+public class AssetUtil {
+
+}

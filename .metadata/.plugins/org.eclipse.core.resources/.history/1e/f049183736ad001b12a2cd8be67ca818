@@ -1,0 +1,10 @@
+package chapter04_람다표현식을이용한설계.ch04_02;
+
+public class CalculateNAV {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

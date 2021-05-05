@@ -1,0 +1,17 @@
+package chapter04_람다표현식을이용한설계.ch04_01_람다를사용한문제의분리;
+
+import java.util.Arrays;
+
+import chapter04_람다표현식을이용한설계.ch04_01_람다를사용한문제의분리.Asset.AssetType;
+
+public class Client {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final List<Asset> assets = Arrays.asList(
+										new Asset(AssetType.BOND, 1000),
+										new Asset(AssetType.BOND, 2000)
+									)
+	}
+
+}

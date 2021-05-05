@@ -1,0 +1,18 @@
+package chapter04_람다표현식을이용한설계.ch04_01_람다를사용한문제의분리;
+
+import java.util.List;
+
+public class AssetUtil {
+	/**
+	 * step1 asset의 모든 값을 더하는 과정 수행
+	 * 1. Assets의 리스트를 스트림으로 변환
+	 * 2. mapToint() 메서드를 사용하여 값에 대한 스트림으로 매핑
+	 * 3. 스트림의 있는 값들을 계산한 후에 sum() 메서드를 사용하여 하나의 값으로 도출
+	 */
+	public static int totalAssetValues(final List<Asset> assets)
+	{
+		return assets.stream()
+						.mapToInt(Asset::getValue)
+						.sum();
+	}
+}

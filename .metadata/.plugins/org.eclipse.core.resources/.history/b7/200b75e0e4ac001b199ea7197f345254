@@ -1,0 +1,20 @@
+package chapter04_람다표현식을이용한설계.ch04_01_람다를사용한문제의분리;
+
+import java.util.List;
+import java.util.function.Predicate;
+
+public class AssetUtilRefactored {
+	/**
+	 * 
+	 * @param assets		assets의 리스트
+	 * @param assetSelector	asset을 고려해야 할지를 판단하는 Predicate
+	 * @return	assetSelector에 의해 필러팅된 값들의 합계값
+	 */
+	public static int totalAssetValues(final List<Asset> assets, final Predicate<Asset> assetSelector)
+	{
+		return assets.stream()
+					.filter(assetSelector)
+					.mapToInt(Asset::getValue)
+					.sum();
+	}
+}

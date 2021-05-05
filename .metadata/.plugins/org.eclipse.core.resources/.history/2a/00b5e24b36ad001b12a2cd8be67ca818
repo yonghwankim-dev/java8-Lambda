@@ -1,0 +1,16 @@
+package chapter04_람다표현식을이용한설계.ch04_02;
+
+import java.math.BigDecimal;
+
+public class CalculateNAV {
+	public BigDecimal computeStockWorth(final String ticker, final int shares){
+		return priceFinder.apply(ticker).multiply(BigDecimal.valueOf(shares));
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
